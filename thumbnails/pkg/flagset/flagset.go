@@ -1,9 +1,6 @@
 package flagset
 
 import (
-	"os"
-	"path/filepath"
-
 	"github.com/owncloud/ocis/ocis-pkg/flags"
 
 	"github.com/micro/cli/v2"
@@ -140,24 +137,24 @@ func ServerWithConfig(cfg *config.Config) []cli.Flag {
 		},
 		&cli.StringFlag{
 			Name:        "filesystemstorage-root",
-			Value:       flags.OverrideDefaultString(cfg.Thumbnail.FileSystemStorage.RootDirectory, filepath.Join(os.TempDir(), "ocis-thumbnails/")),
+			Value:       "/var/tmp/ocis/thumbnails",
 			Usage:       "Root path of the filesystem storage directory",
 			EnvVars:     []string{"THUMBNAILS_FILESYSTEMSTORAGE_ROOT"},
 			Destination: &cfg.Thumbnail.FileSystemStorage.RootDirectory,
 		},
 		&cli.StringFlag{
-			Name:        "webdavsource-baseurl",
-			Value:       flags.OverrideDefaultString(cfg.Thumbnail.WebDavSource.BaseURL, "https://localhost:9200/remote.php/webdav/"),
-			Usage:       "Base url for a webdav api",
-			EnvVars:     []string{"THUMBNAILS_WEBDAVSOURCE_BASEURL"},
-			Destination: &cfg.Thumbnail.WebDavSource.BaseURL,
+			Name:        "reva-gateway-addr",
+			Value:       flags.OverrideDefaultString(cfg.Thumbnail.RevaGateway, "127.0.0.1:9142"),
+			Usage:       "Reva gateway address",
+			EnvVars:     []string{"THUMBNAILS_REVA_GATEWAY", "PROXY_REVA_GATEWAY_ADDR"},
+			Destination: &cfg.Thumbnail.RevaGateway,
 		},
 		&cli.BoolFlag{
 			Name:        "webdavsource-insecure",
-			Value:       flags.OverrideDefaultBool(cfg.Thumbnail.WebDavSource.Insecure, true),
+			Value:       flags.OverrideDefaultBool(cfg.Thumbnail.WebdavAllowInsecure, true),
 			Usage:       "Whether to skip certificate checks",
 			EnvVars:     []string{"THUMBNAILS_WEBDAVSOURCE_INSECURE"},
-			Destination: &cfg.Thumbnail.WebDavSource.Insecure,
+			Destination: &cfg.Thumbnail.WebdavAllowInsecure,
 		},
 		&cli.StringSliceFlag{
 			Name:    "thumbnail-resolution",

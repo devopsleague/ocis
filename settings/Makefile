@@ -15,12 +15,14 @@ endif
 include ../.make/go.mk
 
 
-
 ############ release ############
 include ../.make/release.mk
 
 ############ docs generate ############
 include ../.make/docs.mk
+
+############ l10n ############
+include ../.make/l10n.mk
 
 .PHONY: docs-generate
 docs-generate: config-docs-generate \
@@ -47,10 +49,10 @@ node_modules:
 	yarn install --frozen-lockfile
 
 ############ protobuf ############
-include ../.make/protobuf.mk
-
 PROTO_VERSION := v0
 PROTO_SRC := pkg/proto/$(PROTO_VERSION)
+
+include ../.make/protobuf.mk
 
 .PHONY: protobuf
 protobuf: $(PROTO_SRC)/${NAME}.pb.go \

@@ -1,6 +1,6 @@
 module github.com/owncloud/ocis/onlyoffice
 
-go 1.15
+go 1.16
 
 require (
 	contrib.go.opencensus.io/exporter/jaeger v0.2.1
@@ -15,8 +15,7 @@ require (
 	github.com/spf13/viper v1.7.1
 	github.com/thejerf/suture/v4 v4.0.0
 	go.opencensus.io v0.23.0
-	golang.org/x/mod v0.4.1 // indirect
-	golang.org/x/net v0.0.0-20201224014010-6772e930b67b
+	golang.org/x/net v0.0.0-20210119194325-5f4716e94777
 )
 
 replace (
