@@ -1,0 +1,149 @@
+<svg xmlns="http://www.w3.org/2000/svg" id="graph" width="1920" height="1532.5000305175781"><script type="application/json"><![CDATA[{
+  "name": "oCIS Context",
+  "description": "C4 System Context diagram for oCIS",
+  "version": "v0.0",
+  "elements": [
+    {
+      "id": "14ecnte",
+      "tags": "Element,Software System,Existing System",
+      "location": "External"
+    },
+    {
+      "id": "1b7hd17",
+      "tags": "Element,Software System",
+      "elementViewKey": "oCIS Context"
+    },
+    {
+      "id": "1fu5aoh",
+      "tags": "Element,Person"
+    },
+    {
+      "id": "1pbhrck",
+      "tags": "Element,Person"
+    },
+    {
+      "id": "5wwh7f",
+      "tags": "Element,Software System,Existing System",
+      "location": "External"
+    },
+    {
+      "id": "ng6hpt",
+      "tags": "Element,Person",
+      "location": "External"
+    }
+  ],
+  "layout": {
+    "14ecnte": {
+      "x": 635.5,
+      "y": 1362.5
+    },
+    "1b7hd17": {
+      "x": 687.75,
+      "y": 881.5
+    },
+    "1fu5aoh": {
+      "x": 1416.5,
+      "y": 400.5
+    },
+    "1pbhrck": {
+      "x": 410,
+      "y": 400.5
+    },
+    "5wwh7f": {
+      "x": 1244.25,
+      "y": 1362.5
+    },
+    "ng6hpt": {
+      "x": 965.5,
+      "y": 400.5
+    },
+    "e-10hc0z9": [
+      {
+        "x": 577.75,
+        "y": 1122,
+        "label": true
+      }
+    ],
+    "e-14vhwub": [
+      {
+        "x": 745.5,
+        "y": 641,
+        "label": true
+      }
+    ],
+    "e-15ga99l": [
+      {
+        "x": 350,
+        "y": 641
+      },
+      {
+        "x": 350,
+        "y": 881.5,
+        "label": true
+      },
+      {
+        "x": 350,
+        "y": 1122
+      }
+    ],
+    "e-1hr8dwx": [
+      {
+        "x": 525.5,
+        "y": 641,
+        "label": true
+      }
+    ],
+    "e-e670wz": [
+      {
+        "x": 1416.5,
+        "y": 641,
+        "label": true
+      }
+    ],
+    "e-o2nuis": [
+      {
+        "x": 903.25,
+        "y": 1122,
+        "label": true
+      }
+    ],
+    "e-uzr6jz": [
+      {
+        "x": 1131,
+        "y": 641
+      },
+      {
+        "x": 1131,
+        "y": 881.5,
+        "label": true
+      },
+      {
+        "x": 1131,
+        "y": 1122
+      }
+    ]
+  }
+}]]></script>
+<defs>
+	<marker id="arrow" viewBox="0 0 5 5" refX="4" refY="2.5" markerWidth="5" markerHeight="5" orient="auto" markerUnits="strokeWidth">
+		<path fill="#aaa" stroke-width="1" stroke="none" d="M0,0 L5,2.5 L0,5 Z" class="arrowHead"></path>
+	</marker>
+	<g id="icon-circle" transform="translate(0,-12)" class="icon">
+		<circle cx="7" cy="7" r="7"></circle>
+	</g>
+	<g id="icon-cube" transform="translate(0, -14)" class="icon">
+		<path d="M 5 0 h 10 v 10 l -5 5 h -10 v -10 l 5 -5 M 0 5 h 10 v 10 M 15 0 l -5 5"></path>
+	</g>
+	<filter id="shadow">
+		<feDropShadow dx="3" dy="3" stdDeviation="5" flood-color="#00000030" flood-opacity="1"></feDropShadow>
+	</filter>
+</defs><g class="zoom" transform="scale(1)"><g class="groups"></g><g class="edges"><g class="edge" id="10hc0z9" data-from="1b7hd17" data-to="14ecnte"><rect x="470.7578125" y="1091.5" rx="0" ry="0" width="213.984375" height="61" fill="none" stroke="none"></rect><text x="0" y="1091.5" text-anchor="middle" font-family="Arial, sans-serif" stroke="none" font-size="22" fill="#999" data-field="label"><tspan x="577.75" dy="24px" font-size="22px" font-weight="normal">Authenticates and</tspan><tspan x="577.75" dy="24px" font-size="22px" font-weight="normal">identifies users with</tspan></text><path marker-end="url(#arrow)" class="edge" d="M619.1429313929314,1031.5 L591.700103950104,1091.5 M585.0738045738046,1152.5 L599.481288981289,1212.5" fill="none" stroke="#999" stroke-width="3" stroke-linecap="round" stroke-dasharray="8"></path><circle id="v-1fsb0ym" cx="577.75" cy="1122" r="7" fill="none" class="v-dot"></circle></g><g class="edge" id="14vhwub" data-from="ng6hpt" data-to="1b7hd17"><rect x="644" y="598.5" rx="0" ry="0" width="203" height="85" fill="none" stroke="none"></rect><text x="0" y="598.5" text-anchor="middle" font-family="Arial, sans-serif" stroke="none" font-size="22" fill="#999" data-field="label"><tspan x="745.5" dy="24px" font-size="22px" font-weight="normal">manages files,</tspan><tspan x="745.5" dy="24px" font-size="22px" font-weight="normal">folders and shares</tspan><tspan x="745.5" dy="24px" font-size="22px" font-weight="normal">with</tspan></text><path marker-end="url(#arrow)" class="edge" d="M828.2858627858627,550.5 L784.3773388773388,598.5 M735.2946985446986,683.5 L723.768711018711,731.5" fill="none" stroke="#999" stroke-width="3" stroke-linecap="round" stroke-dasharray="8"></path><circle id="v-amsqxv" cx="745.5" cy="641" r="7" fill="none" class="v-dot"></circle></g><g class="edge" id="15ga99l" data-from="1pbhrck" data-to="14ecnte"><rect x="244.2109375" y="863" rx="0" ry="0" width="211.578125" height="37" fill="none" stroke="none"></rect><text x="0" y="863" text-anchor="middle" font-family="Arial, sans-serif" stroke="none" font-size="22" fill="#999" data-field="label"><tspan x="350" dy="24px" font-size="22px" font-weight="normal">authenticates using</tspan></text><path marker-end="url(#arrow)" class="edge" d="M372.5779625779626,550.5 L350,641 M350,641 L350,863 M350,900 L350,1122 M350,1122 L485.5,1236.1427320490368" fill="none" stroke="#999" stroke-width="3" stroke-linecap="round" stroke-dasharray="8"></path><circle id="v-kts8pd" cx="350" cy="641" r="7" fill="none" class="v-dot"></circle><circle id="v-33h1j6n" cx="350" cy="881.5" r="7" fill="none" class="v-dot"></circle><circle id="v-4iw62ds" cx="350" cy="1122" r="7" fill="none" class="v-dot"></circle></g><g class="edge" id="1hr8dwx" data-from="1pbhrck" data-to="1b7hd17"><rect x="425.2265625" y="622.5" rx="0" ry="0" width="200.546875" height="37" fill="none" stroke="none"></rect><text x="0" y="622.5" text-anchor="middle" font-family="Arial, sans-serif" stroke="none" font-size="22" fill="#999" data-field="label"><tspan x="525.5" dy="24px" font-size="22px" font-weight="normal">provisions storage</tspan></text><path marker-end="url(#arrow)" class="edge" d="M482.03742203742206,550.5 L516.6153846153846,622.5 M537.9807692307693,659.5 L586.5545738045738,731.5" fill="none" stroke="#999" stroke-width="3" stroke-linecap="round" stroke-dasharray="8"></path><circle id="v-37ss6fe" cx="525.5" cy="641" r="7" fill="none" class="v-dot"></circle></g><g class="edge" id="e670wz" data-from="1fu5aoh" data-to="1b7hd17"><rect x="1315" y="598.5" rx="0" ry="0" width="203" height="85" fill="none" stroke="none"></rect><text x="0" y="598.5" text-anchor="middle" font-family="Arial, sans-serif" stroke="none" font-size="22" fill="#999" data-field="label"><tspan x="1416.5" dy="24px" font-size="22px" font-weight="normal">manages files,</tspan><tspan x="1416.5" dy="24px" font-size="22px" font-weight="normal">folders and shares</tspan><tspan x="1416.5" dy="24px" font-size="22px" font-weight="normal">with</tspan></text><path marker-end="url(#arrow)" class="edge" d="M1416.5,550.5 L1416.5,598.5 M1315,674.4967409948542 L837.75,831.9974271012006" fill="none" stroke="#999" stroke-width="3" stroke-linecap="round" stroke-dasharray="8"></path><circle id="v-30c6mfx" cx="1416.5" cy="641" r="7" fill="none" class="v-dot"></circle></g><g class="edge" id="o2nuis" data-from="1b7hd17" data-to="5wwh7f"><rect x="797.4765625" y="1103.5" rx="0" ry="0" width="211.546875" height="37" fill="none" stroke="none"></rect><text x="0" y="1103.5" text-anchor="middle" font-family="Arial, sans-serif" stroke="none" font-size="22" fill="#999" data-field="label"><tspan x="903.25" dy="24px" font-size="22px" font-weight="normal">Manages access to</tspan></text><path marker-end="url(#arrow)" class="edge" d="M822.1574844074844,1031.5 L886.6730769230769,1103.5 M929.4807692307692,1140.5 L1094.25,1256.708211143695" fill="none" stroke="#999" stroke-width="3" stroke-linecap="round" stroke-dasharray="8"></path><circle id="v-l2s1hi" cx="903.25" cy="1122" r="7" fill="none" class="v-dot"></circle></g><g class="edge" id="uzr6jz" data-from="ng6hpt" data-to="14ecnte"><rect x="1025.2109375" y="863" rx="0" ry="0" width="211.578125" height="37" fill="none" stroke="none"></rect><text x="0" y="863" text-anchor="middle" font-family="Arial, sans-serif" stroke="none" font-size="22" fill="#999" data-field="label"><tspan x="1131" dy="24px" font-size="22px" font-weight="normal">authenticates using</tspan></text><path marker-end="url(#arrow)" class="edge" d="M1068.7224532224532,550.5 L1131,641 M1131,641 L1131,863 M1131,900 L1131,1122 M1131,1122 L785.5,1289.6947527749749" fill="none" stroke="#999" stroke-width="3" stroke-linecap="round" stroke-dasharray="8"></path><circle id="v-33iuf4s" cx="1131" cy="641" r="7" fill="none" class="v-dot"></circle><circle id="v-2zql83a" cx="1131" cy="881.5" r="7" fill="none" class="v-dot"></circle><circle id="v-2tcb320" cx="1131" cy="1122" r="7" fill="none" class="v-dot"></circle></g></g><g class="nodes"><g class="node" id="14ecnte" transform="translate(635.5,1362.5)"><rect rx="3" ry="3" x="-150" y="-150" width="300" height="300" class="nodeBorder" fill="#999999" stroke="#999" filter="url(#shadow)" stroke-width="4.3" opacity="0.9"></rect><g transform="translate(0,-70)"><text x="0" y="0" text-anchor="middle" font-family="Arial, sans-serif" stroke="none" fill="#ffffff" data-field="name"><tspan x="0" dy="24px" font-size="22px" font-weight="bold">Identity Management</tspan></text><text x="0" y="48" text-anchor="middle" font-family="Arial, sans-serif" stroke="none" fill="#ffffff" font-size="16.5">[Existing System]</text><text x="0" y="68" text-anchor="middle" font-family="Arial, sans-serif" stroke="none" fill="#ffffff" data-field="description"><tspan x="0" dy="24px" font-size="22px" font-weight="normal">Manages and</tspan><tspan x="0" dy="24px" font-size="22px" font-weight="normal">authenticates users</tspan></text></g></g><g class="node" id="1b7hd17" transform="translate(687.75,881.5)"><rect rx="3" ry="3" x="-150" y="-150" width="300" height="300" class="nodeBorder" fill="#1168bd" stroke="#999" filter="url(#shadow)" stroke-width="4.3" opacity="0.9"></rect><g transform="translate(0,-70)"><text x="0" y="0" text-anchor="middle" font-family="Arial, sans-serif" stroke="none" fill="#ffffff" data-field="name"><tspan x="0" dy="24px" font-size="22px" font-weight="bold">oCIS</tspan></text><text x="0" y="48" text-anchor="middle" font-family="Arial, sans-serif" stroke="none" fill="#ffffff" font-size="16.5">[Software System]</text><text x="0" y="68" text-anchor="middle" font-family="Arial, sans-serif" stroke="none" fill="#ffffff" data-field="description"><tspan x="0" dy="24px" font-size="22px" font-weight="normal">Enterprise File Sync and</tspan><tspan x="0" dy="24px" font-size="22px" font-weight="normal">Share</tspan></text></g></g><g class="node" id="1fu5aoh" transform="translate(1416.5,400.5)" label-offset-y="120"><path d="M 114,100 A150,150 0,0,0 0 150
+		L27.272727272727273,300 L272.72727272727275,300 L300,150
+		A150,150 0,0,0 186 100 
+		A50,50 0,1,0 114 100" transform="translate(-150,-150)" class="nodeBorder" fill="#08427b" stroke="#999" filter="url(#shadow)" stroke-width="4.3" opacity="0.9"></path><g transform="translate(0,-130)"><text x="0" y="120" text-anchor="middle" font-family="Arial, sans-serif" stroke="none" fill="#ffffff" data-field="name"><tspan x="0" dy="24px" font-size="22px" font-weight="bold">External User</tspan></text><text x="0" y="168" text-anchor="middle" font-family="Arial, sans-serif" stroke="none" fill="#ffffff" font-size="16.5">[Person]</text><text x="0" y="188" text-anchor="middle" font-family="Arial, sans-serif" stroke="none" fill="#ffffff" data-field="description"><tspan x="0" dy="24px" font-size="22px" font-weight="normal">A person outside the</tspan><tspan x="0" dy="24px" font-size="22px" font-weight="normal">enterprise</tspan></text></g></g><g class="node" id="1pbhrck" transform="translate(410,400.5)" label-offset-y="120"><path d="M 114,100 A150,150 0,0,0 0 150
+		L27.272727272727273,300 L272.72727272727275,300 L300,150
+		A150,150 0,0,0 186 100 
+		A50,50 0,1,0 114 100" transform="translate(-150,-150)" class="nodeBorder" fill="#08427b" stroke="#999" filter="url(#shadow)" stroke-width="4.3" opacity="0.9"></path><g transform="translate(0,-130)"><text x="0" y="120" text-anchor="middle" font-family="Arial, sans-serif" stroke="none" fill="#ffffff" data-field="name"><tspan x="0" dy="24px" font-size="22px" font-weight="bold">Admin</tspan></text><text x="0" y="168" text-anchor="middle" font-family="Arial, sans-serif" stroke="none" fill="#ffffff" font-size="16.5">[Person]</text><text x="0" y="188" text-anchor="middle" font-family="Arial, sans-serif" stroke="none" fill="#ffffff" data-field="description"><tspan x="0" dy="24px" font-size="22px" font-weight="normal">Manages the EFSS</tspan><tspan x="0" dy="24px" font-size="22px" font-weight="normal">Platform</tspan></text></g></g><g class="node" id="5wwh7f" transform="translate(1244.25,1362.5)"><rect rx="3" ry="3" x="-150" y="-150" width="300" height="300" class="nodeBorder" fill="#999999" stroke="#999" filter="url(#shadow)" stroke-width="4.3" opacity="0.9"></rect><g transform="translate(0,-58)"><text x="0" y="0" text-anchor="middle" font-family="Arial, sans-serif" stroke="none" fill="#ffffff" data-field="name"><tspan x="0" dy="24px" font-size="22px" font-weight="bold">Storage System</tspan></text><text x="0" y="48" text-anchor="middle" font-family="Arial, sans-serif" stroke="none" fill="#ffffff" font-size="16.5">[Existing System]</text><text x="0" y="68" text-anchor="middle" font-family="Arial, sans-serif" stroke="none" fill="#ffffff" data-field="description"><tspan x="0" dy="24px" font-size="22px" font-weight="normal">persists all data</tspan></text></g></g><g class="node" id="ng6hpt" transform="translate(965.5,400.5)" label-offset-y="120"><path d="M 114,100 A150,150 0,0,0 0 150
+		L27.272727272727273,300 L272.72727272727275,300 L300,150
+		A150,150 0,0,0 186 100 
+		A50,50 0,1,0 114 100" transform="translate(-150,-150)" class="nodeBorder" fill="#08427b" stroke="#999" filter="url(#shadow)" stroke-width="4.3" opacity="0.9"></path><g transform="translate(0,-130)"><text x="0" y="120" text-anchor="middle" font-family="Arial, sans-serif" stroke="none" fill="#ffffff" data-field="name"><tspan x="0" dy="24px" font-size="22px" font-weight="bold">End User</tspan></text><text x="0" y="168" text-anchor="middle" font-family="Arial, sans-serif" stroke="none" fill="#ffffff" font-size="16.5">[Person]</text><text x="0" y="188" text-anchor="middle" font-family="Arial, sans-serif" stroke="none" fill="#ffffff" data-field="description"><tspan x="0" dy="24px" font-size="22px" font-weight="normal">A person part of an</tspan><tspan x="0" dy="24px" font-size="22px" font-weight="normal">enterprise</tspan></text></g></g></g></g></svg>

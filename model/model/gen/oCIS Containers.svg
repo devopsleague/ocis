@@ -1,0 +1,220 @@
+<svg xmlns="http://www.w3.org/2000/svg" id="graph" width="2185.75" height="2494.5"><script type="application/json"><![CDATA[{
+  "name": "oCIS Containers",
+  "description": "The container diagram for the oCIS System.",
+  "version": "v0.0",
+  "elements": [
+    {
+      "id": "13dtqm7",
+      "tags": "Element,Container"
+    },
+    {
+      "id": "14ecnte",
+      "tags": "Element,Software System,Existing System",
+      "location": "External"
+    },
+    {
+      "id": "1wr7n63",
+      "tags": "Element,Container,Mobile App"
+    },
+    {
+      "id": "48aq95",
+      "tags": "Element,Container"
+    },
+    {
+      "id": "5wwh7f",
+      "tags": "Element,Software System,Existing System",
+      "location": "External"
+    },
+    {
+      "id": "67uo7o",
+      "tags": "Element,Container"
+    },
+    {
+      "id": "d2ux2c",
+      "tags": "Element,Container,Desktop Client"
+    },
+    {
+      "id": "kpy0s1",
+      "tags": "Element,Container,Web Browser"
+    },
+    {
+      "id": "ng6hpt",
+      "tags": "Element,Person",
+      "location": "External"
+    },
+    {
+      "id": "nr4qqt",
+      "tags": "Element,Container,Mobile App"
+    }
+  ],
+  "layout": {
+    "13dtqm7": {
+      "x": 417.75,
+      "y": 400.5
+    },
+    "14ecnte": {
+      "x": 417.75,
+      "y": 1843.5
+    },
+    "1wr7n63": {
+      "x": 1539.75,
+      "y": 881.5
+    },
+    "48aq95": {
+      "x": 1539.75,
+      "y": 1362.5
+    },
+    "5wwh7f": {
+      "x": 1649.75,
+      "y": 2324.5
+    },
+    "67uo7o": {
+      "x": 1649.75,
+      "y": 1843.5
+    },
+    "d2ux2c": {
+      "x": 1990.75,
+      "y": 881.5
+    },
+    "kpy0s1": {
+      "x": 637.75,
+      "y": 881.5
+    },
+    "ng6hpt": {
+      "x": 1088.75,
+      "y": 400.5
+    },
+    "nr4qqt": {
+      "x": 1088.75,
+      "y": 881.5
+    },
+    "e-13vaw02": [
+      {
+        "x": 1990.75,
+        "y": 641,
+        "label": true
+      }
+    ],
+    "e-177v2gx": [
+      {
+        "x": 1990.75,
+        "y": 1122,
+        "label": true
+      }
+    ],
+    "e-1hu19xm": [
+      {
+        "x": 753.25,
+        "y": 641,
+        "label": true
+      }
+    ],
+    "e-1khjgqi": [
+      {
+        "x": 527.75,
+        "y": 1603,
+        "label": true
+      }
+    ],
+    "e-1uk31co": [
+      {
+        "x": 527.75,
+        "y": 641,
+        "label": true
+      }
+    ],
+    "e-1ya1me6": [
+      {
+        "x": 1088.75,
+        "y": 641,
+        "label": true
+      }
+    ],
+    "e-7jmh50": [
+      {
+        "x": 1539.75,
+        "y": 1122,
+        "label": true
+      }
+    ],
+    "e-d27y46": [
+      {
+        "x": 1649.75,
+        "y": 2084,
+        "label": true
+      }
+    ],
+    "e-fdrfas": [
+      {
+        "x": 1088.75,
+        "y": 1122,
+        "label": true
+      }
+    ],
+    "e-oni2x8": [
+      {
+        "x": 637.75,
+        "y": 1122,
+        "label": true
+      }
+    ],
+    "e-r236w6": [
+      {
+        "x": 1649.75,
+        "y": 1603,
+        "label": true
+      }
+    ],
+    "e-uzr6jz": [
+      {
+        "x": 350,
+        "y": 641
+      },
+      {
+        "x": 350,
+        "y": 881.5
+      },
+      {
+        "x": 350,
+        "y": 1122,
+        "label": true
+      },
+      {
+        "x": 350,
+        "y": 1362.5
+      },
+      {
+        "x": 350,
+        "y": 1603
+      }
+    ],
+    "e-yu13z4": [
+      {
+        "x": 1539.75,
+        "y": 641,
+        "label": true
+      }
+    ]
+  }
+}]]></script>
+<defs>
+	<marker id="arrow" viewBox="0 0 5 5" refX="4" refY="2.5" markerWidth="5" markerHeight="5" orient="auto" markerUnits="strokeWidth">
+		<path fill="#aaa" stroke-width="1" stroke="none" d="M0,0 L5,2.5 L0,5 Z" class="arrowHead"></path>
+	</marker>
+	<g id="icon-circle" transform="translate(0,-12)" class="icon">
+		<circle cx="7" cy="7" r="7"></circle>
+	</g>
+	<g id="icon-cube" transform="translate(0, -14)" class="icon">
+		<path d="M 5 0 h 10 v 10 l -5 5 h -10 v -10 l 5 -5 M 0 5 h 10 v 10 M 15 0 l -5 5"></path>
+	</g>
+	<filter id="shadow">
+		<feDropShadow dx="3" dy="3" stdDeviation="5" flood-color="#00000030" flood-opacity="1"></feDropShadow>
+	</filter>
+</defs><g class="zoom" transform="scale(1)"><g class="groups"><g class="group"><rect x="242.75" y="225.5" rx="0" ry="0" width="1923" height="1830.5" fill="rgba(0, 0, 0, 0.02)" stroke="#666" stroke-width="3" stroke-dasharray="4"></rect><text x="267.75" y="2034" fill="#666" font-size="22px" cursor="default">oCIS</text></g></g><g class="edges"><g class="edge" id="13vaw02" data-from="ng6hpt" data-to="d2ux2c"><rect x="1881.9140625" y="598.5" rx="0" ry="0" width="217.671875" height="85" fill="none" stroke="none"></rect><text x="0" y="598.5" text-anchor="middle" font-family="Arial, sans-serif" stroke="none" font-size="22" fill="#999" data-field="label"><tspan x="1990.75" dy="24px" font-size="22px" font-weight="normal">syncs and manages</tspan><tspan x="1990.75" dy="24px" font-size="22px" font-weight="normal">files, folders and</tspan><tspan x="1990.75" dy="24px" font-size="22px" font-weight="normal">shares with</tspan></text><path marker-end="url(#arrow)" class="edge" d="M1238.75,440.49445676274945 L1881.9140625,611.981105356153 M1990.75,683.5 L1990.75,731.5" fill="none" stroke="#999" stroke-width="3" stroke-linecap="round" stroke-dasharray="8"></path><circle id="v-4j1l9ae" cx="1990.75" cy="641" r="7" fill="none" class="v-dot"></circle></g><g class="edge" id="177v2gx" data-from="d2ux2c" data-to="48aq95"><rect x="1929.0078125" y="1103.5" rx="0" ry="0" width="123.484375" height="37" fill="none" stroke="none"></rect><text x="0" y="1103.5" text-anchor="middle" font-family="Arial, sans-serif" stroke="none" font-size="22" fill="#999" data-field="label"><tspan x="1990.75" dy="24px" font-size="22px" font-weight="normal">syncs with</tspan></text><path marker-end="url(#arrow)" class="edge" d="M1990.75,1031.5 L1990.75,1103.5 M1956.0576923076924,1140.5 L1689.75,1282.511086474501" fill="none" stroke="#999" stroke-width="3" stroke-linecap="round" stroke-dasharray="8"></path><circle id="v-3b6ffua" cx="1990.75" cy="1122" r="7" fill="none" class="v-dot"></circle></g><g class="edge" id="1hu19xm" data-from="ng6hpt" data-to="kpy0s1"><rect x="651.75" y="598.5" rx="0" ry="0" width="203" height="85" fill="none" stroke="none"></rect><text x="0" y="598.5" text-anchor="middle" font-family="Arial, sans-serif" stroke="none" font-size="22" fill="#999" data-field="label"><tspan x="753.25" dy="24px" font-size="22px" font-weight="normal">manages files,</tspan><tspan x="753.25" dy="24px" font-size="22px" font-weight="normal">folders and shares</tspan><tspan x="753.25" dy="24px" font-size="22px" font-weight="normal">with</tspan></text><path marker-end="url(#arrow)" class="edge" d="M938.75,508.0260804769001 L812.5379417879418,598.5 M732.8393970893972,683.5 L709.7874220374221,731.5" fill="none" stroke="#999" stroke-width="3" stroke-linecap="round" stroke-dasharray="8"></path><circle id="v-90awpr" cx="753.25" cy="641" r="7" fill="none" class="v-dot"></circle></g><g class="edge" id="1khjgqi" data-from="48aq95" data-to="14ecnte"><rect x="426.2734375" y="1584.5" rx="0" ry="0" width="202.953125" height="37" fill="none" stroke="none"></rect><text x="0" y="1584.5" text-anchor="middle" font-family="Arial, sans-serif" stroke="none" font-size="22" fill="#999" data-field="label"><tspan x="527.75" dy="24px" font-size="22px" font-weight="normal">Makes API calls to</tspan></text><path marker-end="url(#arrow)" class="edge" d="M1389.75,1398.147233201581 L605.5961538461538,1584.5 M519.2884615384615,1621.5 L486.35706860706864,1693.5" fill="none" stroke="#999" stroke-width="3" stroke-linecap="round" stroke-dasharray="8"></path><circle id="v-1yub99k" cx="527.75" cy="1603" r="7" fill="none" class="v-dot"></circle></g><g class="edge" id="1uk31co" data-from="13dtqm7" data-to="kpy0s1"><rect x="424.09375" y="610.5" rx="0" ry="0" width="207.3125" height="61" fill="none" stroke="none"></rect><text x="0" y="610.5" text-anchor="middle" font-family="Arial, sans-serif" stroke="none" font-size="22" fill="#999" data-field="label"><tspan x="527.75" dy="24px" font-size="22px" font-weight="normal">Delivers to the</tspan><tspan x="527.75" dy="24px" font-size="22px" font-weight="normal">users web browser</tspan></text><path marker-end="url(#arrow)" class="edge" d="M486.35706860706864,550.5 L513.799896049896,610.5 M541.700103950104,671.5 L569.1429313929314,731.5" fill="none" stroke="#999" stroke-width="3" stroke-linecap="round" stroke-dasharray="8"></path><circle id="v-181muh8" cx="527.75" cy="641" r="7" fill="none" class="v-dot"></circle></g><g class="edge" id="1ya1me6" data-from="ng6hpt" data-to="nr4qqt"><rect x="987.25" y="598.5" rx="0" ry="0" width="203" height="85" fill="none" stroke="none"></rect><text x="0" y="598.5" text-anchor="middle" font-family="Arial, sans-serif" stroke="none" font-size="22" fill="#999" data-field="label"><tspan x="1088.75" dy="24px" font-size="22px" font-weight="normal">manages files,</tspan><tspan x="1088.75" dy="24px" font-size="22px" font-weight="normal">folders and shares</tspan><tspan x="1088.75" dy="24px" font-size="22px" font-weight="normal">with</tspan></text><path marker-end="url(#arrow)" class="edge" d="M1088.75,550.5 L1088.75,598.5 M1088.75,683.5 L1088.75,731.5" fill="none" stroke="#999" stroke-width="3" stroke-linecap="round" stroke-dasharray="8"></path><circle id="v-38ir904" cx="1088.75" cy="641" r="7" fill="none" class="v-dot"></circle></g><g class="edge" id="7jmh50" data-from="1wr7n63" data-to="48aq95"><rect x="1438.2734375" y="1103.5" rx="0" ry="0" width="202.953125" height="37" fill="none" stroke="none"></rect><text x="0" y="1103.5" text-anchor="middle" font-family="Arial, sans-serif" stroke="none" font-size="22" fill="#999" data-field="label"><tspan x="1539.75" dy="24px" font-size="22px" font-weight="normal">Makes API calls to</tspan></text><path marker-end="url(#arrow)" class="edge" d="M1539.75,1031.5 L1539.75,1103.5 M1539.75,1140.5 L1539.75,1212.5" fill="none" stroke="#999" stroke-width="3" stroke-linecap="round" stroke-dasharray="8"></path><circle id="v-2qs5uyk" cx="1539.75" cy="1122" r="7" fill="none" class="v-dot"></circle></g><g class="edge" id="d27y46" data-from="67uo7o" data-to="5wwh7f"><rect x="1558.0390625" y="2053.5" rx="0" ry="0" width="183.421875" height="61" fill="none" stroke="none"></rect><text x="0" y="2053.5" text-anchor="middle" font-family="Arial, sans-serif" stroke="none" font-size="22" fill="#999" data-field="label"><tspan x="1649.75" dy="24px" font-size="22px" font-weight="normal">reads and writes</tspan><tspan x="1649.75" dy="24px" font-size="22px" font-weight="normal">from</tspan></text><path marker-end="url(#arrow)" class="edge" d="M1649.75,1993.5 L1649.75,2053.5 M1649.75,2114.5 L1649.75,2174.5" fill="none" stroke="#999" stroke-width="3" stroke-linecap="round" stroke-dasharray="8"></path><circle id="v-3w5yeig" cx="1649.75" cy="2084" r="7" fill="none" class="v-dot"></circle></g><g class="edge" id="fdrfas" data-from="nr4qqt" data-to="48aq95"><rect x="987.2734375" y="1103.5" rx="0" ry="0" width="202.953125" height="37" fill="none" stroke="none"></rect><text x="0" y="1103.5" text-anchor="middle" font-family="Arial, sans-serif" stroke="none" font-size="22" fill="#999" data-field="label"><tspan x="1088.75" dy="24px" font-size="22px" font-weight="normal">Makes API calls to</tspan></text><path marker-end="url(#arrow)" class="edge" d="M1088.75,1031.5 L1088.75,1103.5 M1123.4423076923076,1140.5 L1389.75,1282.511086474501" fill="none" stroke="#999" stroke-width="3" stroke-linecap="round" stroke-dasharray="8"></path><circle id="v-fq38jt" cx="1088.75" cy="1122" r="7" fill="none" class="v-dot"></circle></g><g class="edge" id="oni2x8" data-from="kpy0s1" data-to="48aq95"><rect x="536.2734375" y="1103.5" rx="0" ry="0" width="202.953125" height="37" fill="none" stroke="none"></rect><text x="0" y="1103.5" text-anchor="middle" font-family="Arial, sans-serif" stroke="none" font-size="22" fill="#999" data-field="label"><tspan x="637.75" dy="24px" font-size="22px" font-weight="normal">Makes API calls to</tspan></text><path marker-end="url(#arrow)" class="edge" d="M637.75,1031.5 L637.75,1103.5 M707.1346153846154,1140.5 L1389.75,1322.5055432372505" fill="none" stroke="#999" stroke-width="3" stroke-linecap="round" stroke-dasharray="8"></path><circle id="v-1r36h0w" cx="637.75" cy="1122" r="7" fill="none" class="v-dot"></circle></g><g class="edge" id="r236w6" data-from="48aq95" data-to="67uo7o"><rect x="1550.71875" y="1572.5" rx="0" ry="0" width="198.0625" height="61" fill="none" stroke="none"></rect><text x="0" y="1572.5" text-anchor="middle" font-family="Arial, sans-serif" stroke="none" font-size="22" fill="#999" data-field="label"><tspan x="1649.75" dy="24px" font-size="22px" font-weight="normal">forwards API calls</tspan><tspan x="1649.75" dy="24px" font-size="22px" font-weight="normal">to</tspan></text><path marker-end="url(#arrow)" class="edge" d="M1608.3570686070686,1512.5 L1635.799896049896,1572.5 M1649.75,1633.5 L1649.75,1693.5" fill="none" stroke="#999" stroke-width="3" stroke-linecap="round" stroke-dasharray="8"></path><circle id="v-4cy1zkz" cx="1649.75" cy="1603" r="7" fill="none" class="v-dot"></circle></g><g class="edge" id="uzr6jz" data-from="ng6hpt" data-to="14ecnte"><rect x="244.2109375" y="1103.5" rx="0" ry="0" width="211.578125" height="37" fill="none" stroke="none"></rect><text x="0" y="1103.5" text-anchor="middle" font-family="Arial, sans-serif" stroke="none" font-size="22" fill="#999" data-field="label"><tspan x="350" dy="24px" font-size="22px" font-weight="normal">authenticates using</tspan></text><path marker-end="url(#arrow)" class="edge" d="M938.75,449.33248730964465 L350,641 M350,641 L350,881.5 M350,881.5 L350,1103.5 M350,1140.5 L350,1362.5 M350,1362.5 L350,1603 M350,1603 L375.4942827442827,1693.5" fill="none" stroke="#999" stroke-width="3" stroke-linecap="round" stroke-dasharray="8"></path><circle id="v-19r9lxr" cx="350" cy="641" r="7" fill="none" class="v-dot"></circle><circle id="v-1scocqy" cx="350" cy="881.5" r="7" fill="none" class="v-dot"></circle><circle id="v-45elvlm" cx="350" cy="1122" r="7" fill="none" class="v-dot"></circle><circle id="v-27nxyl1" cx="350" cy="1362.5" r="7" fill="none" class="v-dot"></circle><circle id="v-2grltk9" cx="350" cy="1603" r="7" fill="none" class="v-dot"></circle></g><g class="edge" id="yu13z4" data-from="ng6hpt" data-to="1wr7n63"><rect x="1438.25" y="598.5" rx="0" ry="0" width="203" height="85" fill="none" stroke="none"></rect><text x="0" y="598.5" text-anchor="middle" font-family="Arial, sans-serif" stroke="none" font-size="22" fill="#999" data-field="label"><tspan x="1539.75" dy="24px" font-size="22px" font-weight="normal">manages files,</tspan><tspan x="1539.75" dy="24px" font-size="22px" font-weight="normal">folders and shares</tspan><tspan x="1539.75" dy="24px" font-size="22px" font-weight="normal">with</tspan></text><path marker-end="url(#arrow)" class="edge" d="M1238.75,480.4889135254989 L1460.0514553014552,598.5 M1539.75,683.5 L1539.75,731.5" fill="none" stroke="#999" stroke-width="3" stroke-linecap="round" stroke-dasharray="8"></path><circle id="v-mk2j3a" cx="1539.75" cy="641" r="7" fill="none" class="v-dot"></circle></g></g><g class="nodes"><g class="node" id="13dtqm7" transform="translate(417.75,400.5)"><rect rx="3" ry="3" x="-150" y="-150" width="300" height="300" class="nodeBorder" fill="#438dd5" stroke="#999" filter="url(#shadow)" stroke-width="4.3" opacity="0.9"></rect><g transform="translate(0,-82)"><text x="0" y="0" text-anchor="middle" font-family="Arial, sans-serif" stroke="none" fill="#ffffff" data-field="name"><tspan x="0" dy="24px" font-size="22px" font-weight="bold">ocis web</tspan></text><text x="0" y="48" text-anchor="middle" font-family="Arial, sans-serif" stroke="none" fill="#ffffff" font-size="16.5">[Container: golang and vue]</text><text x="0" y="68" text-anchor="middle" font-family="Arial, sans-serif" stroke="none" fill="#ffffff" data-field="description"><tspan x="0" dy="24px" font-size="22px" font-weight="normal">Delivers the static content</tspan><tspan x="0" dy="24px" font-size="22px" font-weight="normal">and the ocis web single</tspan><tspan x="0" dy="24px" font-size="22px" font-weight="normal">page application.</tspan></text></g></g><g class="node" id="14ecnte" transform="translate(417.75,1843.5)"><rect rx="3" ry="3" x="-150" y="-150" width="300" height="300" class="nodeBorder" fill="#999999" stroke="#999" filter="url(#shadow)" stroke-width="4.3" opacity="0.9"></rect><g transform="translate(0,-70)"><text x="0" y="0" text-anchor="middle" font-family="Arial, sans-serif" stroke="none" fill="#ffffff" data-field="name"><tspan x="0" dy="24px" font-size="22px" font-weight="bold">Identity Management</tspan></text><text x="0" y="48" text-anchor="middle" font-family="Arial, sans-serif" stroke="none" fill="#ffffff" font-size="16.5">[Existing System]</text><text x="0" y="68" text-anchor="middle" font-family="Arial, sans-serif" stroke="none" fill="#ffffff" data-field="description"><tspan x="0" dy="24px" font-size="22px" font-weight="normal">Manages and</tspan><tspan x="0" dy="24px" font-size="22px" font-weight="normal">authenticates users</tspan></text></g></g><g class="node" id="1wr7n63" transform="translate(1539.75,881.5)"><g class="nodeBorder" fill="#438dd5" stroke="#999" filter="url(#shadow)" stroke-width="4.3" opacity="0.9"><rect rx="21.428571428571427" ry="21.428571428571427" x="-187.5" y="-150" width="375" height="300"></rect><rect x="164.46428571428572" y="-21.428571428571427" width="8.571428571428571" height="42.857142857142854"></rect><circle cx="-168.75" cy="0" r="8.571428571428571"></circle><path d="M-150,-150 l0,300 M150,-150 l0,300"></path></g><g transform="translate(0,-94)"><text x="0" y="0" text-anchor="middle" font-family="Arial, sans-serif" stroke="none" fill="#ffffff" data-field="name"><tspan x="0" dy="24px" font-size="22px" font-weight="bold">iOS App</tspan></text><text x="0" y="48" text-anchor="middle" font-family="Arial, sans-serif" stroke="none" fill="#ffffff" font-size="16.5">[Mobile App: xcode]</text><text x="0" y="68" text-anchor="middle" font-family="Arial, sans-serif" stroke="none" fill="#ffffff" data-field="description"><tspan x="0" dy="24px" font-size="22px" font-weight="normal">Provides a limited subset</tspan><tspan x="0" dy="24px" font-size="22px" font-weight="normal">of the Internet banking</tspan><tspan x="0" dy="24px" font-size="22px" font-weight="normal">functionality to customers</tspan><tspan x="0" dy="24px" font-size="22px" font-weight="normal">via their mobile device.</tspan></text></g></g><g class="node" id="48aq95" transform="translate(1539.75,1362.5)"><rect rx="3" ry="3" x="-150" y="-150" width="300" height="300" class="nodeBorder" fill="#438dd5" stroke="#999" filter="url(#shadow)" stroke-width="4.3" opacity="0.9"></rect><g transform="translate(0,-70)"><text x="0" y="0" text-anchor="middle" font-family="Arial, sans-serif" stroke="none" fill="#ffffff" data-field="name"><tspan x="0" dy="24px" font-size="22px" font-weight="bold">ocis proxy</tspan></text><text x="0" y="48" text-anchor="middle" font-family="Arial, sans-serif" stroke="none" fill="#ffffff" font-size="16.5">[Container: golang, go-micro]</text><text x="0" y="68" text-anchor="middle" font-family="Arial, sans-serif" stroke="none" fill="#ffffff" data-field="description"><tspan x="0" dy="24px" font-size="22px" font-weight="normal">routes requests based on</tspan><tspan x="0" dy="24px" font-size="22px" font-weight="normal">the logged in user</tspan></text></g></g><g class="node" id="5wwh7f" transform="translate(1649.75,2324.5)"><rect rx="3" ry="3" x="-150" y="-150" width="300" height="300" class="nodeBorder" fill="#999999" stroke="#999" filter="url(#shadow)" stroke-width="4.3" opacity="0.9"></rect><g transform="translate(0,-58)"><text x="0" y="0" text-anchor="middle" font-family="Arial, sans-serif" stroke="none" fill="#ffffff" data-field="name"><tspan x="0" dy="24px" font-size="22px" font-weight="bold">Storage System</tspan></text><text x="0" y="48" text-anchor="middle" font-family="Arial, sans-serif" stroke="none" fill="#ffffff" font-size="16.5">[Existing System]</text><text x="0" y="68" text-anchor="middle" font-family="Arial, sans-serif" stroke="none" fill="#ffffff" data-field="description"><tspan x="0" dy="24px" font-size="22px" font-weight="normal">persists all data</tspan></text></g></g><g class="node" id="67uo7o" transform="translate(1649.75,1843.5)"><rect rx="3" ry="3" x="-150" y="-150" width="300" height="300" class="nodeBorder" fill="#438dd5" stroke="#999" filter="url(#shadow)" stroke-width="4.3" opacity="0.9"></rect><g transform="translate(0,-70)"><text x="0" y="0" text-anchor="middle" font-family="Arial, sans-serif" stroke="none" fill="#ffffff" data-field="name"><tspan x="0" dy="24px" font-size="22px" font-weight="bold">ocis storage</tspan></text><text x="0" y="48" text-anchor="middle" font-family="Arial, sans-serif" stroke="none" fill="#ffffff" font-size="16.5">[Container: golang, reva]</text><text x="0" y="68" text-anchor="middle" font-family="Arial, sans-serif" stroke="none" fill="#ffffff" data-field="description"><tspan x="0" dy="24px" font-size="22px" font-weight="normal">an opinionated reva</tspan><tspan x="0" dy="24px" font-size="22px" font-weight="normal">configuration</tspan></text></g></g><g class="node" id="d2ux2c" transform="translate(1990.75,881.5)"><rect rx="37.5" ry="37.5" x="-150" y="-150" width="300" height="300" class="nodeBorder" fill="#438dd5" stroke="#999" filter="url(#shadow)" stroke-width="4.3" opacity="0.9"></rect><g transform="translate(0,-70)"><text x="0" y="0" text-anchor="middle" font-family="Arial, sans-serif" stroke="none" fill="#ffffff" data-field="name"><tspan x="0" dy="24px" font-size="22px" font-weight="bold">Desktop client</tspan></text><text x="0" y="48" text-anchor="middle" font-family="Arial, sans-serif" stroke="none" fill="#ffffff" font-size="16.5">[Desktop Client: C++]</text><text x="0" y="68" text-anchor="middle" font-family="Arial, sans-serif" stroke="none" fill="#ffffff" data-field="description"><tspan x="0" dy="24px" font-size="22px" font-weight="normal">syncs files with the users</tspan><tspan x="0" dy="24px" font-size="22px" font-weight="normal">computer</tspan></text></g></g><g class="node" id="kpy0s1" transform="translate(637.75,881.5)" label-offset-y="37.5"><g class="nodeBorder" fill="#438dd5" stroke="#999" filter="url(#shadow)" stroke-width="4.3" opacity="0.9"><rect rx="3" ry="3" x="-150" y="-150" width="300" height="300"></rect><path d="
+			M-150,-112.5 h300
+			M-140.625,-140.625 h18.75 v18.75 h-18.75 z
+			M-112.5,-140.625 h253.125 v18.75 h-253.125 z
+		"></path></g><g transform="translate(0,-124.75)"><text x="0" y="37.5" text-anchor="middle" font-family="Arial, sans-serif" stroke="none" fill="#ffffff" data-field="name"><tspan x="0" dy="24px" font-size="22px" font-weight="bold">Web Single-Page</tspan><tspan x="0" dy="24px" font-size="22px" font-weight="bold">Application</tspan></text><text x="0" y="109.5" text-anchor="middle" font-family="Arial, sans-serif" stroke="none" fill="#ffffff" font-size="16.5">[Web Browser: JavaScript and Angular]</text><text x="0" y="129.5" text-anchor="middle" font-family="Arial, sans-serif" stroke="none" fill="#ffffff" data-field="description"><tspan x="0" dy="24px" font-size="22px" font-weight="normal">Provides all of the Internet</tspan><tspan x="0" dy="24px" font-size="22px" font-weight="normal">banking functionality to</tspan><tspan x="0" dy="24px" font-size="22px" font-weight="normal">customers via their web</tspan><tspan x="0" dy="24px" font-size="22px" font-weight="normal">browser.</tspan></text></g></g><g class="node" id="ng6hpt" transform="translate(1088.75,400.5)" label-offset-y="120"><path d="M 114,100 A150,150 0,0,0 0 150
+		L27.272727272727273,300 L272.72727272727275,300 L300,150
+		A150,150 0,0,0 186 100 
+		A50,50 0,1,0 114 100" transform="translate(-150,-150)" class="nodeBorder" fill="#08427b" stroke="#999" filter="url(#shadow)" stroke-width="4.3" opacity="0.9"></path><g transform="translate(0,-130)"><text x="0" y="120" text-anchor="middle" font-family="Arial, sans-serif" stroke="none" fill="#ffffff" data-field="name"><tspan x="0" dy="24px" font-size="22px" font-weight="bold">End User</tspan></text><text x="0" y="168" text-anchor="middle" font-family="Arial, sans-serif" stroke="none" fill="#ffffff" font-size="16.5">[Person]</text><text x="0" y="188" text-anchor="middle" font-family="Arial, sans-serif" stroke="none" fill="#ffffff" data-field="description"><tspan x="0" dy="24px" font-size="22px" font-weight="normal">A person part of an</tspan><tspan x="0" dy="24px" font-size="22px" font-weight="normal">enterprise</tspan></text></g></g><g class="node" id="nr4qqt" transform="translate(1088.75,881.5)"><g class="nodeBorder" fill="#438dd5" stroke="#999" filter="url(#shadow)" stroke-width="4.3" opacity="0.9"><rect rx="21.428571428571427" ry="21.428571428571427" x="-187.5" y="-150" width="375" height="300"></rect><rect x="164.46428571428572" y="-21.428571428571427" width="8.571428571428571" height="42.857142857142854"></rect><circle cx="-168.75" cy="0" r="8.571428571428571"></circle><path d="M-150,-150 l0,300 M150,-150 l0,300"></path></g><g transform="translate(0,-94)"><text x="0" y="0" text-anchor="middle" font-family="Arial, sans-serif" stroke="none" fill="#ffffff" data-field="name"><tspan x="0" dy="24px" font-size="22px" font-weight="bold">Android App</tspan></text><text x="0" y="48" text-anchor="middle" font-family="Arial, sans-serif" stroke="none" fill="#ffffff" font-size="16.5">[Mobile App: kotlin]</text><text x="0" y="68" text-anchor="middle" font-family="Arial, sans-serif" stroke="none" fill="#ffffff" data-field="description"><tspan x="0" dy="24px" font-size="22px" font-weight="normal">Provides a limited subset</tspan><tspan x="0" dy="24px" font-size="22px" font-weight="normal">of the Internet banking</tspan><tspan x="0" dy="24px" font-size="22px" font-weight="normal">functionality to customers</tspan><tspan x="0" dy="24px" font-size="22px" font-weight="normal">via their mobile device.</tspan></text></g></g></g></g></svg>

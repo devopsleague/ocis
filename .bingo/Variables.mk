@@ -77,6 +77,12 @@ $(HUGO): $(BINGO_DIR)/hugo.mod
 	@echo "(re)installing $(GOBIN)/hugo-v0.80.0"
 	@cd $(BINGO_DIR) && $(GO) build -mod=mod -modfile=hugo.mod -o=$(GOBIN)/hugo-v0.80.0 "github.com/gohugoio/hugo"
 
+MDL := $(GOBIN)/mdl-v1.7.6
+$(MDL): $(BINGO_DIR)/mdl.mod
+	@# Install binary/ries using Go 1.14+ build command. This is using bwplotka/bingo-controlled, separate go module with pinned dependencies.
+	@echo "(re)installing $(GOBIN)/mdl-v1.7.6"
+	@cd $(BINGO_DIR) && $(GO) build -mod=mod -modfile=mdl.mod -o=$(GOBIN)/mdl-v1.7.6 "goa.design/model/cmd/mdl"
+
 MUTAGEN := $(GOBIN)/mutagen-v0.11.8
 $(MUTAGEN): $(BINGO_DIR)/mutagen.mod
 	@# Install binary/ries using Go 1.14+ build command. This is using bwplotka/bingo-controlled, separate go module with pinned dependencies.
