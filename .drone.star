@@ -756,7 +756,7 @@ def buildGithubCommentForBuildStopped(alternateSuiteName):
         "image": "owncloud/ubuntu:16.04",
         "pull": "always",
         "commands": [
-            'echo "<details><summary>:boom: Acceptance tests <strong>%s</strong> failed. The build is cancelled...</summary>\\n\\n" >> /var/www/owncloud/ocis/comments.file' % alternateSuiteName,
+            'echo "<details><summary>:boom: Acceptance tests <strong>%s</strong> failed. The build is cancelled...</summary>\\n\\n" >> /drone/src/comments.file' % alternateSuiteName,
         ],
         "when": {
             "status": [
@@ -777,7 +777,7 @@ def githubComment():
         "image": "jmccann/drone-github-comment:1",
         "pull": "if-not-exists",
         "settings": {
-            "message_file": "/var/www/owncloud/ocis/comments.file",
+            "message_file": "/drone/src/comments.file",
         },
         "environment": {
             "PLUGIN_API_KEY": {
