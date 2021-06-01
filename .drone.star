@@ -1,4 +1,5 @@
 config = {
+    "earlyFail": True,
     "modules": [
         # if you add a module here please also add it to the root level Makefile
         "accounts",
@@ -419,7 +420,7 @@ def localApiTests(ctx, storage = "owncloud", suite = "apiBugDemonstration", acco
                 ],
                 "volumes": [stepVolumeOC10Tests],
             },
-        ] + buildGithubCommentForBuildStopped("Core-API-Tests-%s-storage-%s" % (storage, part_number)) +  githubComment() + stopBuild(),
+        ] + buildGithubCommentForBuildStopped("Core-API-Tests-%s-storage-%s" % (storage, part_number)) + githubComment() + stopBuild(),
         "services": redisForOCStorage(storage),
         "depends_on": getPipelineNames([buildOcisBinaryForTesting(ctx)]),
         "trigger": {
@@ -465,7 +466,7 @@ def coreApiTests(ctx, part_number = 1, number_of_parts = 1, storage = "owncloud"
                 ],
                 "volumes": [stepVolumeOC10Tests],
             },
-        ] + buildGithubCommentForBuildStopped("localApiTests-%s-%s" % (suite, storage)) +  githubComment() + stopBuild(),
+        ] + buildGithubCommentForBuildStopped("localApiTests-%s-%s" % (suite, storage)) + githubComment() + stopBuild(),
         "services": redisForOCStorage(storage),
         "depends_on": getPipelineNames([buildOcisBinaryForTesting(ctx)]),
         "trigger": {
@@ -572,7 +573,7 @@ def uiTestPipeline(ctx, filterTags, runPart = 1, numberOfParts = 1, storage = "o
                                "path": "/uploads",
                            }],
             },
-        ] + buildGithubCommentForBuildStopped(suiteName) +  githubComment() + stopBuild(),
+        ] + buildGithubCommentForBuildStopped(suiteName) + githubComment() + stopBuild(),
         "services": selenium(),
         "volumes": [pipelineVolumeOC10Tests] +
                    [{
@@ -636,7 +637,7 @@ def accountsUITests(ctx, storage = "ocis", accounts_hash_difficulty = 4):
                                "path": "/uploads",
                            }],
             },
-        ] + buildGithubCommentForBuildStopped("accountsUITests") +  githubComment() + stopBuild(),
+        ] + buildGithubCommentForBuildStopped("accountsUITests") + githubComment() + stopBuild(),
         "services": selenium(),
         "volumes": [stepVolumeOC10Tests] +
                    [{
@@ -699,7 +700,7 @@ def settingsUITests(ctx, storage = "ocis", accounts_hash_difficulty = 4):
                                "path": "/uploads",
                            }],
             },
-        ] + buildGithubCommentForBuildStopped("settingsUITests") +  githubComment() + stopBuild(),
+        ] + buildGithubCommentForBuildStopped("settingsUITests") + githubComment() + stopBuild(),
         "services": [
             {
                 "name": "redis",
@@ -741,7 +742,7 @@ def stopBuild():
                 "failure",
             ],
             "config": [
-                "earlyFail"
+                "earlyFail",
             ],
             "event": [
                 "pull_request",
@@ -795,7 +796,6 @@ def githubComment():
             ],
         },
     }]
-
 
 def dockerReleases(ctx):
     pipelines = []
