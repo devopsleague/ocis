@@ -20,22 +20,27 @@ config = {
     ],
     "localApiTests": {
         "skip": False,
+        "earlyFail": True,
     },
     "apiTests": {
         "numberOfParts": 10,
         "skip": False,
         "skipExceptParts": [],
+        "earlyFail": True,
     },
     "uiTests": {
         "filterTags": "@ocisSmokeTest",
         "skip": False,
         "skipExceptParts": [],
+        "earlyFail": True,
     },
     "accountsUITests": {
         "skip": False,
+        "earlyFail": True,
     },
     "settingsUITests": {
         "skip": False,
+        "earlyFail": True,
     },
     "rocketchat": {
         "channel": "ocis-internal",
@@ -414,7 +419,7 @@ def localApiTests(ctx, storage = "owncloud", suite = "apiBugDemonstration", acco
                 ],
                 "volumes": [stepVolumeOC10Tests],
             },
-        ],
+        ] + buildGithubCommentForBuildStopped(name) +  githubComment() + stopBuild(),
         "services": redisForOCStorage(storage),
         "depends_on": getPipelineNames([buildOcisBinaryForTesting(ctx)]),
         "trigger": {
@@ -460,7 +465,7 @@ def coreApiTests(ctx, part_number = 1, number_of_parts = 1, storage = "owncloud"
                 ],
                 "volumes": [stepVolumeOC10Tests],
             },
-        ],
+        ] + buildGithubCommentForBuildStopped(name) +  githubComment() + stopBuild(),
         "services": redisForOCStorage(storage),
         "depends_on": getPipelineNames([buildOcisBinaryForTesting(ctx)]),
         "trigger": {
@@ -491,6 +496,7 @@ def uiTests(ctx):
         # only used if 'full-ci' is in build title
         "numberOfParts": 10,
         "skipExceptParts": [],
+        "earlyFail": True,
     }
     params = {}
     pipelines = []
@@ -566,7 +572,7 @@ def uiTestPipeline(ctx, filterTags, runPart = 1, numberOfParts = 1, storage = "o
                                "path": "/uploads",
                            }],
             },
-        ],
+        ] + buildGithubCommentForBuildStopped(name) +  githubComment() + stopBuild(),
         "services": selenium(),
         "volumes": [pipelineVolumeOC10Tests] +
                    [{
@@ -630,7 +636,7 @@ def accountsUITests(ctx, storage = "ocis", accounts_hash_difficulty = 4):
                                "path": "/uploads",
                            }],
             },
-        ],
+        ] + buildGithubCommentForBuildStopped(name) +  githubComment() + stopBuild(),
         "services": selenium(),
         "volumes": [stepVolumeOC10Tests] +
                    [{
@@ -693,7 +699,7 @@ def settingsUITests(ctx, storage = "ocis", accounts_hash_difficulty = 4):
                                "path": "/uploads",
                            }],
             },
-        ],
+        ] + buildGithubCommentForBuildStopped(name) +  githubComment() + stopBuild(),
         "services": [
             {
                 "name": "redis",
@@ -715,6 +721,81 @@ def settingsUITests(ctx, storage = "ocis", accounts_hash_difficulty = 4):
             ],
         },
     }
+
+def stopBuild():
+    return [{
+        "name": "stop-build",
+        "image": "drone/cli:alpine",
+        "pull": "always",
+        "environment": {
+            "DRONE_SERVER": "https://drone.owncloud.com",
+            "DRONE_TOKEN": {
+                "from_secret": "drone_token",
+            },
+        },
+        "commands": [
+            "drone build stop owncloud/ocis ${DRONE_BUILD_NUMBER}",
+        ],
+        "when": {
+            "status": [
+                "failure",
+            ],
+            "config": [
+                "earlyFail"
+            ],
+            "event": [
+                "pull_request",
+            ],
+        },
+    }]
+
+def buildGithubCommentForBuildStopped(alternateSuiteName):
+    return [{
+        "name": "build-github-comment-buildStop",
+        "image": "owncloud/ubuntu:16.04",
+        "pull": "always",
+        "commands": [
+            'echo "<details><summary>:boom: Acceptance tests <strong>%s</strong> failed. The build is cancelled...</summary>\\n\\n" >> /var/www/owncloud/ocis/comments.file' % alternateSuiteName,
+        ],
+        "when": {
+            "status": [
+                "failure",
+            ],
+            "config": [
+                "earlyFail",
+            ],
+            "event": [
+                "pull_request",
+            ],
+        },
+    }]
+
+def githubComment():
+    return [{
+        "name": "github-comment",
+        "image": "jmccann/drone-github-comment:1",
+        "pull": "if-not-exists",
+        "settings": {
+            "message_file": "/var/www/owncloud/ocis/comments.file",
+        },
+        "environment": {
+            "PLUGIN_API_KEY": {
+                "from_secret": "plugin_api_key",
+            },
+        },
+        "when": {
+            "status": [
+                "failure",
+            ],
+            "config": [
+                "earlyFail",
+            ],
+            "event": [
+                "pull_request",
+            ],
+        },
+    }]
+
 
 def dockerReleases(ctx):
     pipelines = []

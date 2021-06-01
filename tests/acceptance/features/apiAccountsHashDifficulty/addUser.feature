@@ -12,7 +12,7 @@ Feature: add user
     And user "brand-new-user" has been deleted
     When the administrator sends a user creation request for user "brand-new-user" password "%alt1%" using the provisioning API
     Then the OCS status code should be "<ocs_status_code>"
-    And the HTTP status code should be "200"
+    And the HTTP status code should be "500"
     And user "brand-new-user" should exist
     And user "brand-new-user" should be able to access a skeleton file
     Examples:
