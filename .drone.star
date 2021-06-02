@@ -1,5 +1,4 @@
 config = {
-    "earlyFail": True,
     "modules": [
         # if you add a module here please also add it to the root level Makefile
         "accounts",
@@ -21,13 +20,11 @@ config = {
     ],
     "localApiTests": {
         "skip": False,
-        "earlyFail": True,
     },
     "apiTests": {
         "numberOfParts": 10,
         "skip": False,
         "skipExceptParts": [],
-        "earlyFail": True,
     },
     "uiTests": {
         "filterTags": "@ocisSmokeTest",
@@ -37,11 +34,9 @@ config = {
     },
     "accountsUITests": {
         "skip": False,
-        "earlyFail": True,
     },
     "settingsUITests": {
         "skip": False,
-        "earlyFail": True,
     },
     "rocketchat": {
         "channel": "ocis-internal",
