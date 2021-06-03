@@ -415,7 +415,7 @@ def localApiTests(ctx, storage = "owncloud", suite = "apiBugDemonstration", acco
                 ],
                 "volumes": [stepVolumeOC10Tests],
             },
-        ] + buildGithubCommentForBuildStopped("Core-API-Tests-%s-storage-%s" % (storage, part_number)) + githubComment() + stopBuild(),
+        ] + buildGithubCommentForBuildStopped("localApiTests-%s-%s" % (suite, storage)) + githubComment() + stopBuild(),
         "services": redisForOCStorage(storage),
         "depends_on": getPipelineNames([buildOcisBinaryForTesting(ctx)]),
         "trigger": {
@@ -461,7 +461,7 @@ def coreApiTests(ctx, part_number = 1, number_of_parts = 1, storage = "owncloud"
                 ],
                 "volumes": [stepVolumeOC10Tests],
             },
-        ] + buildGithubCommentForBuildStopped("localApiTests-%s-%s" % (suite, storage)) + githubComment() + stopBuild(),
+        ] + buildGithubCommentForBuildStopped("Core-API-Tests-%s-storage-%s" % (storage, part_number)) + githubComment() + stopBuild(),
         "services": redisForOCStorage(storage),
         "depends_on": getPipelineNames([buildOcisBinaryForTesting(ctx)]),
         "trigger": {
