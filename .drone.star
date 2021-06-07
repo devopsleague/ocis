@@ -415,7 +415,7 @@ def localApiTests(ctx, storage = "owncloud", suite = "apiBugDemonstration", acco
                 ],
                 "volumes": [stepVolumeOC10Tests],
             },
-        ] + buildGithubCommentForBuildStopped("localApiTests-%s-%s" % (suite, storage)) + githubComment() + stopBuild(),
+        ] + buildGithubCommentForBuildStopped("localApiTests-%s-%s" % (suite, storage), params['earlyFail']) + githubComment(params['earlyFail']) + stopBuild(params['earlyFail']),
         "services": redisForOCStorage(storage),
         "depends_on": getPipelineNames([buildOcisBinaryForTesting(ctx)]),
         "trigger": {
@@ -461,7 +461,7 @@ def coreApiTests(ctx, part_number = 1, number_of_parts = 1, storage = "owncloud"
                 ],
                 "volumes": [stepVolumeOC10Tests],
             },
-        ] + buildGithubCommentForBuildStopped("Core-API-Tests-%s-storage-%s" % (storage, part_number)) + githubComment() + stopBuild(),
+        ] + buildGithubCommentForBuildStopped("Core-API-Tests-%s-storage-%s" % (storage, part_number), params['earlyFail']) + githubComment(params['earlyFail']) + stopBuild(params['earlyFail']),
         "services": redisForOCStorage(storage),
         "depends_on": getPipelineNames([buildOcisBinaryForTesting(ctx)]),
         "trigger": {
@@ -492,7 +492,6 @@ def uiTests(ctx):
         # only used if 'full-ci' is in build title
         "numberOfParts": 10,
         "skipExceptParts": [],
-        "earlyFail": True,
     }
     params = {}
     pipelines = []
@@ -568,7 +567,7 @@ def uiTestPipeline(ctx, filterTags, runPart = 1, numberOfParts = 1, storage = "o
                                "path": "/uploads",
                            }],
             },
-        ] + buildGithubCommentForBuildStopped(suiteName) + githubComment() + stopBuild(),
+        ] + buildGithubCommentForBuildStopped(suiteName, params['earlyFail']) + githubComment(params['earlyFail']) + stopBuild(params['earlyFail']),
         "services": selenium(),
         "volumes": [pipelineVolumeOC10Tests] +
                    [{
@@ -632,7 +631,7 @@ def accountsUITests(ctx, storage = "ocis", accounts_hash_difficulty = 4):
                                "path": "/uploads",
                            }],
             },
-        ] + buildGithubCommentForBuildStopped("accountsUITests") + githubComment() + stopBuild(),
+        ] + buildGithubCommentForBuildStopped("accountsUITests", params['earlyFail']) + githubComment(params['earlyFail']) + stopBuild(params['earlyFail']),
         "services": selenium(),
         "volumes": [stepVolumeOC10Tests] +
                    [{
@@ -695,7 +694,7 @@ def settingsUITests(ctx, storage = "ocis", accounts_hash_difficulty = 4):
                                "path": "/uploads",
                            }],
             },
-        ] + buildGithubCommentForBuildStopped("settingsUITests") + githubComment() + stopBuild(),
+        ] + buildGithubCommentForBuildStopped("settingsUITests", params['earlyFail']) + githubComment(params['earlyFail']) + stopBuild(params['earlyFail']),
         "services": [
             {
                 "name": "redis",
@@ -718,79 +717,82 @@ def settingsUITests(ctx, storage = "ocis", accounts_hash_difficulty = 4):
         },
     }
 
-def stopBuild():
-    return [{
-        "name": "stop-build",
-        "image": "drone/cli:alpine",
-        "pull": "always",
-        "environment": {
-            "DRONE_SERVER": "https://drone.owncloud.com",
-            "DRONE_TOKEN": {
-                "from_secret": "drone_token",
+def stopBuild(earlyFail):
+    if (earlyFail):
+        return [{
+            "name": "stop-build",
+            "image": "drone/cli:alpine",
+            "pull": "always",
+            "environment": {
+                "DRONE_SERVER": "https://drone.owncloud.com",
+                "DRONE_TOKEN": {
+                    "from_secret": "drone_token",
+                },
             },
-        },
-        "commands": [
-            "drone build stop owncloud/ocis ${DRONE_BUILD_NUMBER}",
-        ],
-        "when": {
-            "status": [
-                "failure",
+            "commands": [
+                "drone build stop owncloud/ocis ${DRONE_BUILD_NUMBER}",
             ],
-            "config": [
-                "earlyFail",
-            ],
-            "event": [
-                "pull_request",
-            ],
-        },
-    }]
-
-def buildGithubCommentForBuildStopped(alternateSuiteName):
-    return [{
-        "name": "build-github-comment-buildStop",
-        "image": "owncloud/ubuntu:16.04",
-        "pull": "always",
-        "commands": [
-            'echo "<details><summary>:boom: Acceptance tests <strong>%s</strong> failed. The build is cancelled...</summary>\\n\\n" >> /drone/src/comments.file' % alternateSuiteName,
-        ],
-        "when": {
-            "status": [
-                "failure",
-            ],
-            "config": [
-                "earlyFail",
-            ],
-            "event": [
-                "pull_request",
-            ],
-        },
-    }]
-
-def githubComment():
-    return [{
-        "name": "github-comment",
-        "image": "jmccann/drone-github-comment:1",
-        "pull": "if-not-exists",
-        "settings": {
-            "message_file": "/drone/src/comments.file",
-        },
-        "environment": {
-            "GITHUB_TOKEN": {
-                "from_secret": "github_token",
+            "when": {
+                "status": [
+                    "failure",
+                ],
+                "event": [
+                    "pull_request",
+                ],
             },
-        },
-        "when": {
-            "status": [
-                "failure",
+        }]
+
+    else:
+        return []
+
+def buildGithubCommentForBuildStopped(alternateSuiteName, earlyFail):
+    if (earlyFail):
+        return [{
+            "name": "build-github-comment-buildStop",
+            "image": "owncloud/ubuntu:16.04",
+            "pull": "always",
+            "commands": [
+                'echo "<details><summary>:boom: Acceptance tests <strong>%s</strong> failed. The build is cancelled...</summary>\\n\\n" >> /drone/src/comments.file' % alternateSuiteName,
             ],
-            "config": [
-                "earlyFail",
-            ],
-            "event": [
-                "pull_request",
-            ],
-        },
-    }]
+            "when": {
+                 "status": [
+                     "failure",
+                 ],
+                "event": [
+                    "pull_request",
+                ],
+            },
+        }]
+
+    else:
+        return []
+
+def githubComment(earlyFail):
+    if (earlyFail):
+        return [{
+            "name": "github-comment",
+            "image": "jmccann/drone-github-comment:1",
+            "pull": "if-not-exists",
+            "settings": {
+                "message_file": "/drone/src/comments.file",
+            },
+            "environment": {
+                "GITHUB_TOKEN": {
+                    "from_secret": "github_token",
+                },
+            },
+            "when": {
+                "status": [
+                    "failure",
+                ],
+                "event": [
+                    "pull_request",
+                ],
+            },
+        }]
+
+    else:
+        return []
 
 def dockerReleases(ctx):
     pipelines = []
