@@ -20,13 +20,13 @@ config = {
     ],
     "localApiTests": {
         "skip": False,
-        "earlyFail": False,
+        "earlyFail": True,
     },
     "apiTests": {
         "numberOfParts": 10,
         "skip": False,
         "skipExceptParts": [],
-        "earlyFail": False,
+        "earlyFail": True,
     },
     "uiTests": {
         "filterTags": "@ocisSmokeTest",
@@ -36,11 +36,11 @@ config = {
     },
     "accountsUITests": {
         "skip": False,
-        "earlyFail": False,
+        "earlyFail": True,
     },
     "settingsUITests": {
         "skip": False,
-        "earlyFail": False,
+        "earlyFail": True,
     },
     "rocketchat": {
         "channel": "ocis-internal",
