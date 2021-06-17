@@ -10,18 +10,25 @@ For simplicity this document mostly refers to the [ocis subproject](https://www.
 [I don't want to read this whole thing, I just have a question!!!](#i-dont-want-to-read-this-whole-thing-i-just-have-a-question)
 
 [What should I know before I get started?](#what-should-i-know-before-i-get-started)
-  * [Atom and Packages](#atom-and-packages)
-  * [Atom Design Decisions](#design-decisions)
+  * [ownCloud is hosted on Github](#owncloud-is-hosted-on-github)
+  * [ownCloud Company, Engineering Partners and Community](#owncloud-company,-engineering-partners-and-community)
+  * [Licensing and CLA](licensing-and-cla)
 
 [How Can I Contribute?](#how-can-i-contribute)
+  * [Help spreading the word!](help-spreading-the-word!)
   * [Reporting Bugs](#reporting-bugs)
   * [Suggesting Enhancements](#suggesting-enhancements)
   * [Your First Code Contribution](#your-first-code-contribution)
   * [Pull Requests](#pull-requests)
+  * [Documentation Contributions](#documentation-contributions)
+  * [Internationalization](#internationalization)
+  * [Deployments: Docker, Ansible and friends](#deployments:-docker,-ansible-and-friends)
+
 
 [Styleguides](#styleguides)
   * [Git Commit Messages](#git-commit-messages)
-  * [JavaScript Styleguide](#javascript-styleguide)
+  * [Golang Styleguide](#golang-styleguide)
+  * [Web Styleguide](#web-styleguide)
   * [Documentation Styleguide](#documentation-styleguide)
 
 [Additional Notes](#additional-notes)
@@ -29,11 +36,11 @@ For simplicity this document mostly refers to the [ocis subproject](https://www.
 
   ## I don't want to read this whole thing I just have a question!!!
 
-> **Note:** [Please don't file an issue to ask a question.](https://blog.atom.io/2016/04/19/managing-the-deluge-of-atom-issues.html) You'll get faster results by using the resources below.
+> **Note:** Please don't file an issue to ask a question. You'll get faster results by using the resources below.
 
 For general questions, please refer to [ownCloud's FAQs](https://owncloud.com/faq/) or ask on the [ownCloud Central Server](https://central.owncloud.org/).
 
-We have a [Rocket Chat Server](https://talk.owncloud.com/channel/infinitescale) to answer your questions specifically to ownCloud Infinite Scale.
+We also have a [Rocket Chat Server](https://talk.owncloud.com/channel/infinitescale) to answer your questions specifically to ownCloud Infinite Scale.
 
 ## What should I know before I get started
 
@@ -45,13 +52,13 @@ For other ways of contributing, for example with translations, other systems req
 
 The ownCloud development follows the strict Github based workflow of
 
-### The ownCloud Company, the Engineering Partners and Community
+### ownCloud Company, Engineering Partners and Community
 
-ownCloud Infinite Scale is heavily developed by a number of developer that are employed by the [ownCloud company](https://www.owncloud.com), which is located in Germany, operating on the whole planet supporting customers with their ownCloud Setups. In addition there are engineering partners who might also work full time on ownCloud related code.
+ownCloud Infinite Scale is heavily developed developers who are employed by the [ownCloud company](https://www.owncloud.com), which is located in Germany. It is providing support for ownCloud for customers worldwide. In addition there are engineering partners who also work full time on ownCloud related code, for example in [CERN REVA](https://github.com/cs3org/reva/).
 
-Because of that fact, the pace that the development is moving forward is sometimes high for people who are not willing and able to spend an comparable amount of time to contribute. Even though this can be a challenge, it should not scare anybody away. It is our clear statement that we feel honored by everybody who is interested in our work and improves it, no matter how big the contribution might be.
+Because of that fact, the pace that the development is moving forward is sometimes high for people who are not willing and/or able to spend a comparable amount of time to contribute. Even though this can be a challenge, it should not scare anybody away. Here is our clear commitment that we feel honored by everybody who is interested in our work and improves it, no matter how big the contribution might be.
 
-We are doing our best to listen to, review and consider all changes that are brought forward following this guideline and make sense for the project. That is true for the ownCloud company and also the engineering partners.
+We as the full time devs from either organization are doing our best to listen, review and consider all changes that are brought forward following this guideline and make sense for the project.
 
 ### Licensing and CLA
 
@@ -64,6 +71,16 @@ Currently, only for the following parts you need to sign a [Contributors License
 Please make sure to read and understand the details of the CLA before starting to invest time on a component that requires it. If you have any questions or concerns please feel free to raise them with us.
 
 ## How Can I Contribute?
+
+There are many ways to contribute to open source projects, and all are equally valuable and appreciated.
+
+### Help spreading the word!
+
+This way to contribute to the project can not be overestimated: People who talk about their experience with ownCloud Infinite Scale and help others with that are the key to success of the project.
+
+There are too many ways of doing that to line them up here, but examples are answering questions in [ownCloud Central](https://central.owncloud.org/) or on [ownCloud Talk](https://central.owncloud.org/), writing blog posts etc pp.
+
+There is no formal guideline to this, just do it :-)
 
 ### Reporting Bugs
 
@@ -122,10 +139,131 @@ Enhancement suggestions are tracked as [GitHub issues](https://guides.github.com
 * **Provide specific examples to demonstrate the steps**. Include copy/pasteable snippets which you use in those examples, as [Markdown code blocks](https://help.github.com/articles/markdown-basics/#multiple-lines).
 * **Explain why this enhancement would be useful** to most ownCloud users.
 * **List some other projects or products where this enhancement exists.**
-* **Specify which version of ownCloud you're using.**
+
+### Your First Code Contribution
+
+Unsure where to begin contributing to ownCloud? You can start by looking through these `Needs-help` issues:
+
+* [Beginner issues][Interaction:Needs-tests] - issues which would benefit from a test.
+* [Help wanted issues][Interaction:Needs-help] - issues which should be a bit more involved than `beginner` issues.
+
+It is fine to pick one of the list following personal preference. While not perfect, number of comments is a reasonable proxy for impact a given change will have.
+
+To find out how to set up ownCloud Infinite Scale for local development please refer to the [Developer Documentation](https://owncloud.dev/ocis/development/getting-started/). It contains a lot of information that will come in handy when starting to work on the project.
+
+### Pull Requests
+
+All contributions to ownClouds projects use so called pull requests following the [Github PR workflow](https://guides.github.com/introduction/flow/).
+
+Please follow these steps to have your contribution considered by the maintainers:
+
+1. Follow all instructions in [the template](.github/pull_request_template.md)
+2. Follow the [styleguides](#styleguides) where applicable
+3. After you submit your pull request, verify that all [status checks](https://help.github.com/articles/about-status-checks/) are passing <details><summary>What if the status checks are failing?</summary>If a status check is failing, and you believe that the failure is unrelated to your change, please leave a comment on the pull request explaining why you believe the failure is unrelated. A maintainer will re-run the status check for you. If we conclude that the failure was a false positive, then we will open an issue to track that problem with our status check suite.</details>
+
+While the prerequisites above must be satisfied prior to having your pull request reviewed, the reviewer(s) may ask you to complete additional design work, tests, or other changes before your pull request can be ultimately accepted.
+
+### Documentation Contributions
+
+ownCloud is very proud of the documentation it has, which is the work of a great team of people. Of course, also the documentation is open to contributions.
+
+See the [Getting Started Guide](https://github.com/owncloud/docs/blob/master/docs/getting-started.md) on how to get started. Many other useful information is summarized in the [Documentation Readme](https://github.com/owncloud/docs).
+
+### Internationalization
+
+ownCloud is translated in many languages to allow people from all oever the world to use ownCloud in their native language. For translations, ownCloud uses [Transifex](https://www.transifex.com) as community based collaboration collaboration platform for internationalization.
+
+For contributions please refer to the [Transifex Resources](https://www.transifex.com/resources/) to learn how to improve ownClouds translations there.
+
+### Deployments: Docker, Ansible and friends
+
+Depending on the ownCloud component, there is complex deployment tooling to install in various environments. There is for example [ownCloud Ansible](https://github.com/owncloud-ansible) with Ansible resources. Contributions to that are very appreciated and follow the same guidelines as every other code contribution.
+
+## Styleguides
+
+To keep up with a consistent code and tooling landscape, some of the ownCloud modules maintain styleguides for contributions. It is mandatory to follow them in contributions.
+
+### Git Commit Messages
+
+* Use the present tense ("Add feature" not "Added feature")
+* Use the imperative mood ("Move cursor to..." not "Moves cursor to...")
+* Limit the first line to 72 characters or less
+* Reference issues and pull requests liberally after the first line
+* When only changing documentation, include `[docs-only]` in the commit title
+
+### Golang Styleguide
+
+TBD
+
+### Web Styleguide
+
+See the styleguide document in the [ownCloud Web Repository](https://github.com/owncloud/web).
+
+#### Documentation Styleguide
+
+Find the [ownCloud Docuemntation Styleguide](https://github.com/owncloud/docs/blob/master/docs/style-guide.md).
+
+## Additional Notes
+
+### Issue and Pull Request Labels
+
+This section lists the labels we use to help us track and manage issues and pull requests. Most labels are used across all ownCloud repositories, but some are specific.
 
 
+[GitHub search](https://help.github.com/articles/searching-issues/) makes it easy to use labels for finding groups of issues or pull requests you're interested in. To help you find issues and pull requests, each label can be used in search links for finding open items with that label in the ownCloud repositories.
 
+We  encourage you to read about [other search filters](https://help.github.com/articles/searching-issues/) which will help you write more focused queries.
 
+The labels are loosely grouped by their purpose, but it's not required that every issue has a label from every group or that an issue can't have more than one label from the same group.
+
+The list here contains all the more general categories of issues which are followed by a colon and a specific value. For example severity 1 looks like `Severity:sev1-critical`.
+
+#### Platform
+
+Describes the platform the issue is happening on, ie. iOS or Windows.
+
+#### Estimation
+
+T-Shirt sizes for effort estimation to fix that bug or implement an enhancement. Ranges from XS to XXXL.
+
+#### Priority
+
+P1 to P4 (lowest) to indicate an priority. Mostly a tool for internal project management and support.
+
+#### QA
+
+Flags to indicate the internal QA status in terms of process and priority. Please leave alone unless you're QA ;-)
+
+#### Severity
+
+Severity for the product, mostly impact on user.
+
+#### Type
+
+The issue type, helps to structure the issues in the agile categories (Epic, Story...) but also organizational ones.
+
+#### Topic
+
+A general category of the topic of a ticket.
+
+#### Category
+
+Categorizes the issue to also indicate the type of the issue.
+
+#### Status
+
+The status in the ticket live cycle. Keep an eye on that one, especially for the `Waiting-for-Feedback` tag which migth indicate that the reporter is asked for feedback.
+
+#### Interaction
+
+Another label that indicates the type of the issue.
+
+#### Browser
+
+Important for browser dependent web issues. It specifies the browser that shows the error.
+
+#### Early-Adopter:
+
+Tags issues that were reported by one of the oCIS early adopters, ie. customers and users who start using ownCloud Infinite Scale before it's general availability.
 
 
